@@ -1,0 +1,19 @@
+{
+    "name": "yiqiang/googlemap",
+    "description": "Google Map widget for Yii2",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "yiqiang",
+            "email": "daiyqj@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yiqiang\\googlemap\\": ""
+        }
+    }
+}
