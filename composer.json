@@ -1,6 +1,8 @@
 {
-    "name": "yiqiang/googlemap",
+    "name": "yiqiang/yii2-googlemap",
     "description": "Google Map widget for Yii2",
+    "keywords": ["yii", "extension", "widget", "google map"],
+    "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
         {
