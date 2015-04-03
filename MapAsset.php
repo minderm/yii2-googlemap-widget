@@ -20,7 +20,7 @@ use yii\web\AssetBundle;
  */
 
 class MapAsset extends AssetBundle{
-	public $sourcePath = '@vendor/yiqiang/yii2-googlemap/js/';
+	public $sourcePath = '@vendor/minderm/yii2-googlemap-widget/js/';
 
 	public $js = [
 		'map.js'
