@@ -1,5 +1,5 @@
 {
-    "name": "yiqiang/yii2-googlemap",
+    "name": "minderm/yii2-googlemap-widget",
     "description": "Google Map widget for Yii2",
     "keywords": ["yii", "extension", "widget", "google map"],
     "type": "yii2-extension",
@@ -8,6 +8,10 @@
         {
             "name": "yiqiang",
             "email": "daiyqj@gmail.com"
+        },
+        {
+            "name": "minderm",
+            "email": "imam.sharif@gmail.com"
         }
     ],
     "require": {
