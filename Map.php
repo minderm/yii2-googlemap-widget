@@ -31,6 +31,7 @@ class Map extends Widget{
 	public $api="http://maps.googleapis.com/maps/api/geocode/json?address=";
 	public $inline_style="";
 	public $markers=[];
+	public $polylines=[];
 	public $options=[];
 	public $address;
 	public $markerIcon;
@@ -118,6 +119,7 @@ class Map extends Widget{
 		$view=$this->getView();
 
 		$config['markers']=$this->markers;
+        $config['polylines']=$this->polylines;
 		$config['options']=$this->options;
 		$config['icon_img']=$this->markerIcon;
 		$config['id']=$this->id;
