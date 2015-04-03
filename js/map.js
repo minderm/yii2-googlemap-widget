@@ -38,24 +38,28 @@
 		{
 			for (var i = 0; i < markers.length; i++)
 			{
-                var pinColor = markers[i].color;
-                var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
-                    new google.maps.Size(21, 34),
-                    new google.maps.Point(0,0),
-                    new google.maps.Point(10, 34));
-                var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-                    new google.maps.Size(40, 37),
-                    new google.maps.Point(0, 0),
-                    new google.maps.Point(12, 35));
-
                 var markerLatLng = new google.maps.LatLng(markers[i][1], markers[i][2]);
 				var marker = new google.maps.Marker({
 					position: markerLatLng,
 					map: map,
-					title: markers[i][0],
-                    icon: pinImage,
-                    shadow: pinShadow
+					title: markers[i][0]
 				});
+
+                if (markers[i].color != undefined){
+                    var pinColor = markers[i].color;
+                    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+                        new google.maps.Size(21, 34),
+                        new google.maps.Point(0,0),
+                        new google.maps.Point(10, 34));
+                    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+                        new google.maps.Size(40, 37),
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(12, 35));
+
+                    marker.setIcon(pinImage);
+                    marker.setShadow(pinShadow);
+                }
+
 				if(icon_img!='') marker.setIcon(icon_img);
 			}
 		}
