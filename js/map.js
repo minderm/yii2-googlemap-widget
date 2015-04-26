@@ -71,7 +71,7 @@
             };
 
             for (var j = 0; j < lines.length; j++) {
-                var markers = lines[j];
+                var markers = lines[j].points;
                 var lineCoordinates = []
                 for (var i = 0; i < markers.length; i++)
                 {
@@ -80,6 +80,7 @@
 
                 var line = new google.maps.Polyline({
                     path: lineCoordinates,
+                    strokeColor: lines[j].color,
                     icons: [{
                         icon: lineSymbol,
                         offset: '100%'
