@@ -39,11 +39,27 @@
 			for (var i = 0; i < markers.length; i++)
 			{
                 var markerLatLng = new google.maps.LatLng(markers[i][1], markers[i][2]);
-				var marker = new google.maps.Marker({
-					position: markerLatLng,
-					map: map,
-					title: markers[i][0]
-				});
+
+                if (markers[i].label != undefined){
+                    var marker = new MarkerWithLabel({
+                        position: markerLatLng,
+                        map: map,
+                        title: markers[i][0],
+                        //draggable: true,
+                        raiseOnDrag: true,
+                        map: map,
+                        labelContent: markers[i].label,
+                        labelAnchor: markerLatLng,
+                        labelClass: "labels", // the CSS class for the label
+                        labelStyle: {opacity: 0.75},
+                    });
+                } else {
+                    var marker = new google.maps.Marker({
+                        position: markerLatLng,
+                        map: map,
+                        title: markers[i][0]
+                    });
+                }
 
                 if (markers[i].color != undefined){
                     var pinColor = markers[i].color;

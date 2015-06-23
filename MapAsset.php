@@ -22,8 +22,13 @@ use yii\web\AssetBundle;
 class MapAsset extends AssetBundle{
 	public $sourcePath = '@vendor/minderm/yii2-googlemap-widget/js/';
 
+    public $css = [
+        'style.css'
+    ];
+
 	public $js = [
-		'map.js'
+		'map.js',
+        'markerwithlabel_packed.js'
 	];
 
     public $depends = [
