@@ -28,6 +28,7 @@ class MapAsset extends AssetBundle{
 
 	public $js = [
 		'map.js',
+        'markerclusterer_compiled.js',
         'markerwithlabel_packed.js'
 	];
 
