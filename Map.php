@@ -39,6 +39,7 @@ class Map extends Widget{
 	public $id;
 	public $style;
 	public $fitBound;
+	public $isCluster;
 
 	/**
      * Get Geolocation for a particular address
@@ -73,6 +74,8 @@ class Map extends Widget{
 		if(empty($this->markerIcon)) $this->markerIcon="";
 
 		if(empty($this->fitBound)) $this->fitBound=FALSE;
+
+		if(empty($this->isCluster)) $this->isCluster=FALSE;
 
 		if(!empty($this->style))
 		{
@@ -124,6 +127,7 @@ class Map extends Widget{
 		$config['icon_img']=$this->markerIcon;
 		$config['id']=$this->id;
 		$config['isFitBound']=$this->fitBound;
+		$config['isCluster']=$this->isCluster;
 
 		$view->registerJsFile('https://maps.googleapis.com/maps/api/js?v=3.exp',['depends' => [JqueryAsset::className()]]);
 		MapAsset::register($view);
